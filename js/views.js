@@ -1,5 +1,5 @@
 /* ============================================================
-   YARNEY TONES — PAGES
+   YARNY TONES — PAGES
    Each view has render(params) → html and mount(root, params) → cleanup
    ============================================================ */
 (function () {
@@ -242,11 +242,11 @@
           <div class="story-text">
             <span class="eyebrow">our story</span>
             <h2 class="section-title mt-16" data-split>One hook, a lot of yarn, <em>and a little dream</em></h2>
-            <p data-reveal>${CFG.ownerName ? `Hi, I'm ${esc(CFG.ownerName)}!` : "Hi there!"} Yarney Tones started with one wobbly amigurumi and a whole lot of YouTube tutorials.</p>
+            <p data-reveal>${CFG.ownerName ? `Hi, I'm ${esc(CFG.ownerName)}!` : "Hi there!"} Yarny Tones started with one wobbly amigurumi and a whole lot of YouTube tutorials.</p>
             <p data-reveal>What began as a hobby to unwind after long days turned into a tiny studio full of yarn (seriously, it's everywhere). Every piece is still made by hand, one stitch at a time, the slow way. No machines, no mass production, just patience and a lot of love.</p>
             <p data-reveal>Whether it's a ready-to-ship bunny or a custom bouquet for your wedding, it's made with the same care we'd put into a gift for our own best friend.</p>
             <div class="values" data-stagger="up"><span class="pill">${icon("hook")} 100% handmade</span><span class="pill">${icon("leaf")} Skin-friendly yarns</span><span class="pill">${icon("gift")} Plastic-free packaging</span></div>
-            <div class="signature" data-reveal>with love, ${CFG.ownerName ? esc(CFG.ownerName) : "Yarney Tones"} ♡</div>
+            <div class="signature" data-reveal>with love, ${CFG.ownerName ? esc(CFG.ownerName) : "Yarny Tones"} ♡</div>
           </div>
         </div>
       </section>

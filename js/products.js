@@ -1,5 +1,5 @@
 /* ============================================================
-   YARNEY TONES — CATALOGUE
+   YARNY TONES — CATALOGUE
    ------------------------------------------------------------
    HOW TO ADD A PRODUCT
    Copy one of the blocks below and change the values.

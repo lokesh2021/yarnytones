@@ -1,5 +1,5 @@
 /* ============================================================
-   YARNEY TONES — MOTION & DELIGHT
+   YARNY TONES — MOTION & DELIGHT
    Reveal-on-scroll, split text, magnetic buttons, card tilt,
    the dangling yarn cursor, fly-to-bag, confetti and friends.
    ============================================================ */

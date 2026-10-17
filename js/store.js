@@ -1,5 +1,5 @@
 /* ============================================================
-   YARNEY TONES — CART, WISHLIST & ORDERS (saved in the browser)
+   YARNY TONES — CART, WISHLIST & ORDERS (saved in the browser)
    ============================================================ */
 (function () {
   const CFG = window.YT_CONFIG;

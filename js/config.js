@@ -1,5 +1,5 @@
 /* ============================================================
-   YARNEY TONES — SHOP SETTINGS
+   YARNY TONES — SHOP SETTINGS
    ------------------------------------------------------------
    This is the only file you need to touch to change contact
    details, prices for extras, shipping rules, etc.
@@ -7,17 +7,17 @@
    ============================================================ */
 
 window.YT_CONFIG = {
-  brand: "Yarney Tones",
+  brand: "Yarny Tones",
   tagline: "Little loops of joy, hooked by hand.",
 
   // ✏️ WhatsApp number with country code, digits only (e.g. 91 + 10-digit number)
   whatsapp: "919929934802",
   // ✏️ Where order copies / custom requests can be emailed
-  email: "hello@yarneytones.in",
+  email: "hello@yarnytones.in",
   // ✏️ Instagram handle without the @
-  instagram: "yarneytones",
+  instagram: "yarnytones",
   // ✏️ UPI ID for payments (shown at checkout + used for "Pay with UPI" link)
-  upiId: "yarneytones@okaxis",
+  upiId: "yarnytones@okaxis",
   // ✏️ Shown on the story section (leave "" to keep it anonymous)
   ownerName: "",
   city: "India",

@@ -1,10 +1,10 @@
-# Yarney Tones: handmade crochet shop
+# Yarny Tones: handmade crochet shop
 
 A no-build static website. Open `index.html` through any static host (or a local server), and it just works.
 
 ## Run it locally
 ```bash
-cd ~/Desktop/yarneytones && python3 -m http.server 5173
+cd ~/Desktop/yarnytones && python3 -m http.server 5173
 ```
 Then open http://127.0.0.1:5173
 

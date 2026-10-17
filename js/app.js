@@ -1,5 +1,5 @@
 /* ============================================================
-   YARNEY TONES — APP (router, header, bag, search, toasts)
+   YARNY TONES — APP (router, header, bag, search, toasts)
    ============================================================ */
 (function () {
   const CFG = window.YT_CONFIG;

@@ -1,5 +1,5 @@
 /* ============================================================
-   YARNEY TONES — HAND-DRAWN CROCHET ILLUSTRATIONS
+   YARNY TONES — HAND-DRAWN CROCHET ILLUSTRATIONS
    Every piece is an SVG coloured with CSS variables (--c1/--c2/--c3),
    so changing a colourway re-tints the drawing with a smooth fade.
    Available: bunny, bear, octopus, tulips, sunflower, tote, bucket,
