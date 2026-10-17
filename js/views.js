@@ -636,6 +636,7 @@
                 <button class="btn btn-lg" id="pd-add" data-magnetic="0.2">${icon("bag")}${btnLabel("Add to bag")}</button>
               </div>
               <button class="btn btn-rose btn-lg btn-block mt-16" id="pd-buy" data-reveal>${btnLabel("Buy it now")}${icon("arrow", "arrow")}</button>
+              <div class="buy-bar" id="buy-bar" aria-hidden="true"><div class="bb-info"><b>${esc(p.name)}</b><span id="bb-price">${money(p.price)}</span></div><button class="btn" id="bb-add">${icon("bag")}${btnLabel("Add to bag")}</button></div>
 
               <div class="perks" data-stagger="up">
                 <div class="perk">${icon("hook")}100% handmade</div>
@@ -754,6 +755,34 @@
         if (add(e.currentTarget)) setTimeout(() => (location.hash = "#/checkout"), 700);
       });
       bindAccordion(root);
+
+      // sticky buy bar on phones: appears once the real buy button scrolls away
+      const bar = root.querySelector("#buy-bar");
+      const buyRow = root.querySelector(".buy-row");
+      document.body.classList.add("has-buybar");
+      const barIO = new IntersectionObserver(([e]) => {
+        const show = !e.isIntersecting && e.boundingClientRect.top < 0;
+        bar.classList.toggle("show", show);
+        bar.setAttribute("aria-hidden", !show);
+      }, { threshold: 0 });
+      barIO.observe(buyRow);
+      root.querySelector("#bb-add").addEventListener("click", (e) => {
+        if (nameCb && nameCb.checked && !nameTxt.value.trim()) {
+          FX.scrollTo(nameTxt, { offset: -160 });
+          setTimeout(() => nameTxt.focus(), 600);
+          window.YT.toast("Pop in the name you'd like stitched ✍️");
+          return;
+        }
+        if (add(e.currentTarget)) window.YT.toast(`<b>${esc(p.name)}</b> is in your bag! <a href="#" data-open-cart>View bag</a>`, { art: p.art, colors: p.colorways[st.cw], bg: p.bg });
+      });
+      const bbPrice = root.querySelector("#bb-price");
+      const syncBar = () => setTimeout(() => (bbPrice.textContent = priceEl.textContent), 520);
+      [nameCb, giftCb].forEach((el) => el && el.addEventListener("change", syncBar));
+      root.querySelector(".buy-row .qty").addEventListener("click", syncBar);
+      return () => {
+        barIO.disconnect();
+        document.body.classList.remove("has-buybar");
+      };
     },
   };
 
@@ -791,10 +820,12 @@
               <div class="stage" id="sp-stage"><span class="dots-bg"></span><div id="sp-art" class="wiggle-host" style="width:100%;display:grid;place-items:center"></div>
                 <button class="shuffle" id="sp-shuffle">${icon("dice")} Shuffle colours</button>
                 <span class="size-tag" id="sp-size"></span></div>
-              <div class="palette-chosen" id="sp-pal"></div>
-              <div class="estimate">
-                <div><div class="lbl">Estimated price</div><div class="val" id="sp-price"></div></div>
-                <div class="time"><div class="lbl">Ready in</div><div class="val" id="sp-time"></div></div>
+              <div class="side">
+                <div class="palette-chosen" id="sp-pal"></div>
+                <div class="estimate">
+                  <div><div class="lbl">Estimated price</div><div class="val" id="sp-price"></div></div>
+                  <div class="time"><div class="lbl">Ready in</div><div class="val" id="sp-time"></div></div>
+                </div>
               </div>
             </aside>
           </div>
