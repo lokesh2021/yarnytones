@@ -11,7 +11,7 @@ window.YT_CONFIG = {
   tagline: "Little loops of joy, hooked by hand.",
 
   // ✏️ WhatsApp number with country code, digits only (e.g. 91 + 10-digit number)
-  whatsapp: "919999999999",
+  whatsapp: "919929934802",
   // ✏️ Where order copies / custom requests can be emailed
   email: "hello@yarneytones.in",
   // ✏️ Instagram handle without the @
